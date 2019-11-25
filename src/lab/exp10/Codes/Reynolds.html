@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--Head-->
+ <head>
+    <title>Reynolds Experiment</title>
+	<meta charset="UTF-8">
+    <meta name="description" content="This page has a simulation for reynolds experiment">
+    <meta name="keywords" content="Reynolds,Experiment,Laminar,Transitional,Turbulent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="../Libraries/canvasjs.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+<!--Head ends and body starts-->
+
+  <body>
+	<div class="outline">
+		<canvas></canvas>
+		<div class="overlay">
+			<ul style="color:#006599">
+				<li><a onclick="heading(this)" name="Laminar">Laminar</a></li>
+				<li><a onclick="heading(this)" name="Transitional">Transitional</a></li>
+				<li><a onclick="heading(this)" name="Turbulent">Turbulent</a></li>
+			</ul>
+			<a id="cal" href="#t1"><b>Perform <br>Calculations</b></a>
+		</div>
+		<div class="button">
+			<button id="b" onclick="main()" >Start</button>
+		</div>
+		<div >
+			<u id="heading" style="color:#006599">Laminar</u>
+		</div>
+	
+	<!-- First Parameter-->	
+	
+		<div class="cont1" >
+		<div id="t1">
+		<b>Temp of Water</b>
+		</div>
+		<div id="s1">
+		<input type="text" class="slider" id="myRange1">
+		</div>
+		<div id="demo1">
+		C
+		</div>
+		<div style="margin-left:250px;">
+		<b>Regime of Flow:</b>
+		</div>
+		<div id="flow">
+		</div>
+		</div>
+		
+	<!-- Second Parameter-->
+	
+		<div class="cont2">
+		<div id="t2">
+		<b>Diameter of Measuring Tube</b>
+		</div>
+		<div id="s2">
+		<input type="text"  class="slider" id="myRange2">
+		</div>
+		<div id="demo2">
+		Cm
+		</div>
+		<div style="margin-left:240px;">
+		<b>Reynolds Number:</b>
+		</div>
+		<div id="Number"  >
+		</div>
+		</div>
+		
+	<!-- Third Parameter-->	
+		<div class="cont3">
+		<div id="t3">
+		<b>Collected Water Length</b>
+		</div>
+		<div id="s3">
+		<input type="text" class="slider" id="myRange3">
+		</div>
+		<div id="demo3">
+		Cm
+		</div>
+		</div>
+	
+	<!-- Fourth Parameter-->	
+	
+		<div class="cont4">
+		<div id="t4">
+		<b>Time Taken to Collect</b>
+		</div>
+		<div id="s4">
+		<input type="text" class="slider" id="myRange4">
+		</div>
+		<div id="demo4">
+		Sec
+		</div>
+		</div>
+	
+	<!-- Fifth Parameter-->	
+	
+		<div class="cont5">
+		<div id="t5">
+		<b>Dia of Pipe</b>
+		</div>
+		<div id="s5">
+		<input type="text" class="slider" id="myRange5">
+		</div>
+		<div id="demo5">
+		Cm
+		</div>
+		<div id="calculate">
+		<button onclick="rno()">Calculate</button>
+		</div>
+		<div id="reset">
+		<button onclick="reset()">Reset</button>
+		</div>
+		
+	</div>
+	
+	<!-- Inclusion of js file-->
+	<script src="script.js">
+	</script>
+	
+  </body>
+ </html>

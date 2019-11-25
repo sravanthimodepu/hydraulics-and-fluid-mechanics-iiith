@@ -1,0 +1,100 @@
+body
+{
+	margin:0;
+}
+.outline
+{
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+
+.overlay
+{
+  bottom: 0;
+  left: 180px;
+  top:120px;
+  position: absolute;
+  width: 100%;
+}
+li,button
+{
+	cursor:pointer;
+}
+button
+{
+	background-color:#484848;
+	color:white;
+	border:0;
+}
+.button
+{
+	top:140px;
+	left:950px;
+	position:absolute;
+	width:100%;
+
+}
+#heading
+{
+	top:110px;
+	left:650px;
+	position:absolute;
+	width:100%;
+	color:#006599;
+}
+
+.cont1,.cont2,.cont3,.cont4,.cont5{
+	display:flex;
+	margin-bottom:20px;
+	width:1000px;
+	margin-left:160px;
+	background-color:#ffe6e6;
+	
+}
+
+#flow
+{
+	margin-left:10px;
+}
+#s1
+{
+	margin-left:105px;
+	margin-right:10px;
+}
+#s2
+{
+	margin-left:10px;
+	margin-right:10px;
+}
+#Number
+{
+	margin-left:10px;
+}
+#s3
+{
+	margin-left:43px;
+	margin-right:10px;
+}
+#s4
+{
+	margin-left:55px;
+	margin-right:10px;
+}
+#s5
+{
+	margin-left:130px;
+	margin-right:10px;
+}
+#calculate
+{
+	margin-left:50px;
+}
+#reset
+{
+	margin-left:20px;
+}
+#cal
+{
+	margin-left:0px;
+}

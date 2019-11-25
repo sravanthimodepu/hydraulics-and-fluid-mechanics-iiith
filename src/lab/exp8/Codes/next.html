@@ -1,0 +1,162 @@
+<html>
+<head>
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<script type="text/javascript" src="js/check.js"></script>
+	<script type="text/javascript" src="js/check2.js"></script>
+	<script type="text/javascript" src="js/next.js"> </script>
+	<script type="text/javascript" src="js/experiment.js"> </script>
+	<script type="text/javascript" src="js/weirs.js"> </script>
+	<script type="text/javascript" src="js/water.js"> </script>
+	
+	<title>weirs experiment</title>
+
+</head>
+<body onload="experiment();">
+
+	<script type="text/javascript">
+		window.onbeforeunload = function () {
+   			return 'Are you sure you want to leave?';
+		}
+	</script>
+
+<div class="container">
+
+	<div class="black_color">
+		<h3>Weirs Test</h3>
+	</div>
+
+	<!-- buttons above -->
+	<div class="white_color"> 
+
+ 
+		<button class="btn" name="simulation" id="start" onclick="window.location='experiment.html';">
+				<img src="images/start.png">
+				<span>simulation</span>
+
+		</button>
+
+		<button class="btn" name="stop" id="stop" onclick="window.location='experiment.html';" style="display: none;">
+			<img src="images/stop.png">
+			stop
+		</button>
+		
+		<button class="btn" id="next" onclick="next();">
+			<img src="images/next.png">
+			Next
+		</button>
+		
+		<button class="btn" name="restart" onclick="window.location='experiment.html';">
+			<img src="images/restart.png">
+			Restart
+		</button>
+		
+	</div>
+	
+	<div class="scene" >
+  			
+  		<div class="shapes" id="shapes">
+ 			<span style="font-size:10px;text-align:left;color: blue;">rectangular and triangular weirs</span>
+ 			<div id="weir1"  style="display: inline-block;">
+				<svg height="100" width="112">
+  					<polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+  					Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
+
+			<div  id="weir2" style="display: inline-block;">
+				<svg height="110" width="120">
+  					<polygon points="29 105,117 103,112 13,84 12,81 45,59 44,56 15,26 13" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+  					Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
+			<div  id="weir3" style="display:inline-block;">
+				<svg height="100" width="128">
+  				<polygon points="26 94,126 92,125 11,87 12,72 44,73 47,54 13,24 11" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+  					Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
+		</div>
+
+		<div class="experiment">	
+			<canvas id="myCanvas" width=800 height="325" ></canvas>
+			<div class="water" id="water"></div>
+		</div>
+		<center><div class="note" id="note"></div>	</center>
+	
+	</div><!--scene class-->
+	
+
+	<!-- check box -->
+	<div class="whitesmoke_color">
+				
+		<input type="checkbox" name="inputParameter" id="inputParameter" onclick="checkbox()">
+		<img src="images/tasklist.png">
+		Show input Parameters 
+	
+			
+		<input type="checkbox" name="show_graph"  id="show_graph"  onclick="checkbox2()">
+		<img src="images/show_graph.png">
+		<span >Show Graph</span>
+
+		<button class="btn" name="graph" onclick="window.open('graph.html',
+			'popUpWindow',
+			'height=350,width=500,left=300,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+			<img src="images/graph_window.png">
+			Full View Graph
+		</button>
+	
+	</div>
+
+	<!-----------for input parameters-------------------------------------->
+	<!--div is defalut not visible ,visible onclick checkbox-->
+	<div class="parameters" id="parameters" >
+		<!--for input parameters" -->
+		<div class="slidecontainer">
+  				<p>Length :	<input type="range" min="1" max="100" value="50" class="slider" id="Length">
+  					Value: <span id="Length_output"></span>
+  				</p>
+		</div>
+
+		<div class="slidecontainer">
+  				<p>Height:	<input type="range" min="0.1" max="2.0" step="0.1" value="0.5" class="slider" id="Height">
+  					Value: <span id="Height_output"></span>
+  				</p>
+		</div>
+
+		<div class="slidecontainer">
+  				<p>cofficient of discharge:	<input type="range" min="0.1" step="0.01" max="1.0" value="0.1" class="slider" id="cd">
+  					Value: <span id="cd_output"></span>
+  				</p>
+		</div>
+
+		<div class="slidecontainer">
+  				<p>	Area :	<input type="range" min="1" max="100" value="50" class="slider" id="Area">
+  					Value: <span id="Area_output"></span>
+  				</p>
+		</div>
+		<button onclick="show()" >calculate and display</button>
+		<div id="sh" >
+			press button to calculate 
+		</div>
+		<div>
+				<p id="q_value"><p>
+					<center><div id="Result"></div></center>
+		</div>
+	</div>
+<!-------------------------------------------input paramerters division closed ---------------------------->
+
+
+	<!--div for graph default not visible,onclick checkbox show graph -->
+	<div id="chartContainer" style="height: 300px; width: 100% display:none;"></div>
+
+
+</div><!--container class-->
+</body>
+</html>

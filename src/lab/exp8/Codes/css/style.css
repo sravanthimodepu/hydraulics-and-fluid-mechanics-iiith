@@ -1,0 +1,141 @@
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css');
+
+/*main part*/
+.container{
+	margin-top: 30px;
+ 	margin-left: auto;
+	margin-right: auto;
+  width:70%;
+  height: 800px;
+}
+
+/* buttons */
+.white_color{
+	background-color:#F5F5F5;
+	padding-left:300px;  
+}
+
+
+/* Style buttons */
+.btn {
+  background-color: #80ccff;
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  padding: 5px 10px 5px 2px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  margin-left: 5px;
+}
+
+
+/* heading */
+.black_color{
+	background-color: Black;
+	text-align: center;
+	color: #f7d92e;
+	font-size: 16px;
+	
+	width: 100%;
+  
+}
+
+.showresult{
+
+  display: inline-block;
+    height: 500px;
+}
+
+.scene {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  border: 2px solid red;
+}
+.shapes{
+  display: none;
+  margin-left: 50px;
+  height: 110;
+}
+.experiment{
+  margin-left: 100px;
+  position: relative;
+
+}
+.water{
+  display: none;
+  position:absolute;
+  top: 170px;/*105*/
+  left: 26px;
+  width: 325px;
+  height: 0px;/*60*/
+  background-color: #1ca3ec;
+  transform: rotate(4deg);
+}
+.note{
+ /* text-align: center;*/
+  display: none;
+  border: 2px solid blue;
+  border-radius: 5px;
+  color: blue;
+}
+
+/*checkbox */
+.whitesmoke_color{
+	background-color:#F5F5F5;
+	padding-left:  200px;
+}
+
+.parameters{
+  display: none;
+}
+
+.slidecontainer {
+  margin-top:10px;
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+table,tr,td,th{
+  border: 1px solid blue;
+  text-align: center;
+  
+}
+th ,td{
+  padding:10px;
+}
